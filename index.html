@@ -51,9 +51,22 @@
     </div>
     
 
-    <script src="app.js"></script>
+
     <script src="node_modules/confetti-js/dist/index.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    
+        <script>
+        let cs= {target: 'can'};
+        let confetti = new ConfettiGenerator(cs);
+        confetti.render();
+        gsap.from("#bottom", {display: "none",duration: 1,delay:.5, x:200});
+        gsap.to("#bottom", {dipslay: "block" ,duration: 1, x:0});
+        gsap.from("#middle", {display: "none" ,duration: 1,delay: 1, y:-200});
+        gsap.to("#middle", {dipslay: "block" ,duration: 1, y:0});
+        gsap.from("#top", {display: "none",duration: 1,delay:1.5 , x:-200});
+        gsap.to("#top", {dipslay: "block" ,duration: 1, x:0});
+        gsap.from("#candle", {display: "none",duration: 1,delay:1.5 , y:-200});
+        gsap.to("#candle", {dipslay: "block" ,duration: 1, y:0});
+   </script>
+   
 </body>
 </html>
